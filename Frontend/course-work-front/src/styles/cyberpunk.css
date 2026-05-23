@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+:root {
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --neon-yellow: #fdf500;
+    --dark-bg: #05050a;
+    --panel-bg: rgba(10, 10, 20, 0.8);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--neon-cyan);
+    font-family: 'Rajdhani', sans-serif; /* Ретро-футуристичный шрифт */
+    background-image: linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px; /* Сетка в стиле ретро-синтвейв */
+}
+
+/* Стилизуем карточки Bootstrap */
+.card {
+    background: var(--panel-bg);
+    border: 1px solid var(--neon-magenta);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px var(--neon-cyan);
+    border-color: var(--neon-cyan);
+}
+
+/* Неоновые кнопки */
+.btn-cyber {
+    background-color: transparent;
+    color: var(--neon-yellow);
+    border: 2px solid var(--neon-yellow);
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--neon-yellow);
+}
+
+.btn-cyber:hover {
+    background-color: var(--neon-yellow);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-yellow);
+}
+/* Киберпанк-поля ввода */
+.form-control-cyber {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--neon-cyan);
+    color: #fff;
+    border-radius: 0;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.form-control-cyber:focus {
+    background-color: rgba(0, 243, 255, 0.05);
+    border-color: var(--neon-magenta);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    outline: none;
+}
+
+/* Изменение цвета плейсхолдера */
+.form-control-cyber::placeholder {
+    color: rgba(0, 243, 255, 0.3);
+}
+
+/* Стилизация алертов (ошибок) под киберпанк */
+.alert-cyber {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    color: #ff4d4d;
+    border-radius: 0;
+}
+.alert-success-cyber {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    border-radius: 0;
+}
+/* --- CYBERPUNK NAVBAR --- */
+.navbar-cyber {
+    background-color: rgba(5, 5, 10, 0.95);
+    border-bottom: 1px solid var(--neon-cyan);
+    box-shadow: 0 4px 15px rgba(0, 243, 255, 0.2);
+}
+
+/* 1. Название магазина (Бренд)
+   Делаем его неоново-розовым (Magenta), чтобы оно круто выделялось на фоне голубых ссылок */
+.navbar-cyber .navbar-brand {
+    color: var(--neon-magenta) !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px var(--neon-magenta);
+    transition: 0.3s;
+}
+
+.navbar-cyber .navbar-brand:hover {
+    color: #fff !important;
+    text-shadow: 0 0 15px var(--neon-magenta);
+}
+
+/* 2. Обычные ссылки и имя пользователя (в покое - ГОЛУБЫЕ) */
+.navbar-cyber .nav-link {
+    color: var(--neon-cyan) !important;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-shadow: 0 0 3px rgba(0, 243, 255, 0.3); /* Легкое голубое свечение */
+}
+
+/* 3. Обычные ссылки и имя пользователя (при наведении - ЖЕЛТЫЕ) */
+.navbar-cyber .nav-link:hover,
+.navbar-cyber .nav-link:focus,
+.navbar-cyber .nav-link[aria-expanded="true"] { /* Чтобы имя оставалось желтым, пока меню открыто */
+    color: var(--neon-yellow) !important;
+    text-shadow: 0 0 10px var(--neon-yellow);
+}
+
+/* --- ВЫПАДАЮЩЕЕ МЕНЮ ПРОФИЛЯ --- */
+.dropdown-menu-cyber {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--neon-yellow); /* Рамка тоже желтая для поддержки стиля */
+    border-radius: 0;
+    box-shadow: 0 0 15px rgba(253, 245, 0, 0.15);
+}
+
+/* Элементы списка в меню (в покое - ГОЛУБЫЕ) */
+.dropdown-menu-cyber .dropdown-item {
+    color: var(--neon-cyan);
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.navbar-cyber .dropdown-toggle {
+    color: var(--neon-cyan) !important;
+    opacity: 1 !important; /* Убиваем стандартную тусклость Bootstrap */
+    text-shadow: 0 0 4px rgba(0, 243, 255, 0.4);
+    font-weight: 600;
+    transition: 0.3s;
+}
+/* Когда наводим мышку ИЛИ когда меню открыто (желтый цвет) */
+.navbar-cyber .dropdown-toggle:hover,
+.navbar-cyber .dropdown-toggle:focus,
+.navbar-cyber .dropdown-toggle.show {
+    color: var(--neon-yellow) !important;
+    text-shadow: 0 0 10px var(--neon-yellow);
+}
+
+/* Элементы списка (при наведении - ЖЕЛТЫЕ) */
+.dropdown-menu-cyber .dropdown-item:hover {
+    background-color: rgba(253, 245, 0, 0.1);
+    color: var(--neon-yellow);
+    text-shadow: 0 0 8px var(--neon-yellow);
+}
+
+/* ИСКЛЮЧЕНИЕ: Кнопка отключения (красная) */
+.dropdown-menu-cyber .dropdown-item.text-danger {
+    color: #ff4d4d !important;
+}
+
+.dropdown-menu-cyber .dropdown-item.text-danger:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+    color: #ff0000 !important;
+    text-shadow: 0 0 10px red;
+}
+
+/* Гамбургер */
+.navbar-toggler {
+    border-color: var(--neon-cyan);
+}
+.navbar-toggler-icon {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+/*АДМИНКА*/
+/* Киберпанк таблицы */
+.table-cyber {
+    color: var(--neon-cyan);
+    background-color: transparent;
+    border-color: rgba(255, 0, 255, 0.3);
+}
+.table-cyber th {
+    color: var(--neon-magenta);
+    border-bottom: 2px solid var(--neon-magenta);
+    text-transform: uppercase;
+}
+.table-cyber td {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--neon-cyan);
+    vertical-align: middle;
+}
+/* Боковое меню админки */
+.nav-cyber .nav-link {
+    color: #fff;
+    border-radius: 0;
+    margin-bottom: 5px;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+}
+.nav-cyber .nav-link:hover {
+    color: var(--neon-cyan);
+    background-color: rgba(0, 243, 255, 0.1);
+}
+.nav-cyber .nav-link.active {
+    color: var(--neon-yellow);
+    background-color: rgba(253, 245, 0, 0.1);
+    border-left: 3px solid var(--neon-yellow);
+}

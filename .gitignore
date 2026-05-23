@@ -1,0 +1,21 @@
+# === ФРОНТЕНД (WebStorm / Node) ===
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# === БЭКЕНД (Visual Studio / C#) ===
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+appsettings.Development.json
+
+# === ПАПКИ Среды Разработки ===
+.idea/
+.vscode/
+
+# === ЗАГРУЖЕННЫЕ ФАЙЛЫ (Аватарки и обложки) ===
+# Мы игнорируем сами картинки, так как на новом ПК они не нужны
+Backend/DatabaseCourseWork/wwwroot/uploads/*
+!Backend/DatabaseCourseWork/wwwroot/uploads/.gitkeep
