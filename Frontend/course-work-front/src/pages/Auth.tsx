@@ -51,15 +51,22 @@ const Auth = () => {
                 navigate('/');
             } else {
                 // РЕГИСТРАЦИЯ
+
                 await api.post('/Auth/register', {
                     username: formData.username,
                     email: formData.email,
                     password: formData.password
                 });
 
+                const response = await api.post('/Auth/login', {
+                    email: formData.email,
+                    password: formData.password
+                });
+
                 setSuccessMsg('Регистрация успешна! Теперь вы можете войти.');
-                setIsLogin(true); // Переключаем форму на логин
-                setFormData({ ...formData, password: '' }); // Сбрасываем пароль
+                loginAction(response.data.token);
+                // Перекидываем пользователя на главную страницу
+                navigate('/');
             }
         } catch (err: unknown) {
             // если это ошибка от сервера (Axios)
